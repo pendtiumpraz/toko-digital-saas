@@ -43,6 +43,7 @@ const subscriptionRoutes = require('./routes/subscription');
 const analyticsRoutes = require('./routes/analytics');
 const domainRoutes = require('./routes/domain');
 const aiRoutes = require('./routes/ai');
+const whatsappRoutes = require('./routes/whatsapp');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/store', storeRoutes);
@@ -53,6 +54,7 @@ app.use('/api/subscription', subscriptionRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/domain', domainRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api/whatsapp', whatsappRoutes);
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/toko-digital', {
   useNewUrlParser: true,
